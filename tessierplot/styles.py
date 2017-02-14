@@ -202,7 +202,8 @@ def helper_deint_cross(w):
 
 def helper_massage(w):
 	func = w['massage_func']
-	func(w)
+	for f in func:
+            f(w)
 
 STYLE_FUNCS = {
 	'deinterlace': helper_deinterlace,
